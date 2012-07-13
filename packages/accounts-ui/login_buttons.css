@@ -24,6 +24,8 @@
     color: white;
     text-shadow: #062C50 0px 1px 0px;
 
+    text-align: center;
+
     background: #19558D;
     border: 1px solid #062C50;
     border-top-color: #103372;
@@ -32,8 +34,9 @@
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
+}
 
-    /* xcxc only in dropdown mode */
+.login-dropdown-list .login-button {
     width: 150px;
     margin-bottom: 4px;
 }
@@ -49,7 +52,8 @@
     color: red;
 }
 
-#login-buttons .login-link-and-dropdown {
+#login-buttons .login-link-and-dropdown-list {
+    right: 5px;
     position: relative;
 }
 
@@ -64,23 +68,31 @@
     float: right;
     position: relative;
     left: 1px; /* = #login-buttons.border-width */
+    padding-bottom: 3px;
 }
 
-#login-buttons .login-dropdown {
+#login-buttons .login-dropdown-list {
     position: absolute;
     border: 1px solid black;
     z-index: 1000;
-    width: 180px;
+    width: 167px;
     right: 0px;
     top: 0px;
-    xcxcbackground: white;
+    background: white;
 
     margin-top: -5px;
     padding-top: 4px; /* = border-width - margin-top */
-/*
-    margin-right: -5px; /* these two must be equal */
-/*    padding-right: 5px;
-*/
 
-    padding-bottom: 5px;
+    margin-right: -8px;
+    padding-right: 8px; /* = -margin-right */
+
+    padding-bottom: 4px;
+
+    -moz-box-shadow:    -2px 3px 3px 1px #ccc;
+    -webkit-box-shadow: -2px 3px 3px 1px #ccc;
+    box-shadow:         -2px 3px 3px 1px #ccc;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }

@@ -32,13 +32,12 @@
   {{/each}}
 </template>
 
-<!-- xcxc rename, collapsed dropdown? -->
 <template name="loginButtonsServicesDropdown">
-  <div class="login-link-and-dropdown">
+  <div class="login-link-and-dropdown-list">
     <a class="login-link-text">Login</a>
     {{#if dropdownVisible}}
-    <div class="login-dropdown">
-      <a class="login-close-text">Login</a>
+    <div class="login-dropdown-list">
+      <a class="login-close-text">Close</a>
       {{> loginButtonsServicesRow}}
     </div>
     {{/if}}
