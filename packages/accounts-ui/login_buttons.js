@@ -3,8 +3,10 @@
   // should we show a dropdown rather than a row of buttons
   Template.loginButtons.dropdown = function () {
     var services = Template.loginButtons.services();
-    // xcxc this is wrong perhaps? (if you only have login/password)
-    return (_.contains(services, 'password') || services.length > 2);
+
+    // XXX this might probably change.
+    return (_.contains(services, 'password') && services.length > 1)
+      || services.length > 2;
   };
 
   Template.loginButtons.events = {
@@ -66,7 +68,7 @@
     return ret;
   };
 
-  // xcxc this is bad.
+  // XXX should we instead define a helper function?
   Template.loginButtonsServicesRow.services = Template.loginButtons.services;
 
   var DROPDOWN_VISIBLE_KEY = 'Meteor.loginButtons.dropdownVisible';
